@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="select_in_main">34sp</dimen>
+    <dimen name="text_bottom_shield">24sp</dimen>
+    <dimen name="height_text_bottom_shield">30dp</dimen>
+    <dimen name="margin_bottom_shield_text">50dp</dimen>
+</resources>

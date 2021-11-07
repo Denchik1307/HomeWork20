@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="video_card">
+        <item>GeForce TX1100GT</item>
+        <item>GeForce TX900GTX</item>
+        <item>GeForce MX480GT</item>
+        <item>GeForce MX490XT</item>
+        <item>Radeon 9600</item>
+        <item>Radeon 9800</item>
+        <item>Radeon 9800S</item>
+        <item>Radeon 9999SXT</item>
+    </string-array>
+</resources>
