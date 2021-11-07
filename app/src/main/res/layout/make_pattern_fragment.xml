@@ -10,7 +10,6 @@
         android:id="@+id/make_bottom_shield"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/clear"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
