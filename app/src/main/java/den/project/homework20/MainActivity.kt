@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity() {
                 supportFragmentManager,
                 BottomShieldDialog.toString()
             )
-            view.text = "select"
+            view.text = "selected"
         }
     }
 
