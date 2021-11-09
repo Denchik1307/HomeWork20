@@ -1,4 +1,4 @@
-package den.project.homework20.card
+package den.project.homework20.presentation.recycler
 
 import android.view.LayoutInflater
 import android.view.View
@@ -8,7 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import den.project.homework20.R
 import kotlinx.android.synthetic.main.fragment_bottom_shield.view.*
 
-class CardHolder  private constructor(itemView: View) : RecyclerView.ViewHolder(itemView) {
+class CardHolder private constructor(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
     companion object {
         fun from(parent: ViewGroup): CardHolder {

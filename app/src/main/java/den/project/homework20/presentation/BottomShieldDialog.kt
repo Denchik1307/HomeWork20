@@ -1,19 +1,26 @@
-package den.project.homework20
+package den.project.homework20.presentation
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.fragment.app.activityViewModels
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
-import den.project.homework20.card.ListCard
-import den.project.homework20.card.MyAdapter
+import den.project.homework20.data.ListCard
+import den.project.homework20.databinding.MakePatternFragmentBinding
+import den.project.homework20.domain.ViewModel
+import den.project.homework20.presentation.recycler.MyAdapter
 import kotlinx.android.synthetic.main.make_pattern_fragment.*
 
 class BottomShieldDialog : BottomSheetDialogFragment() {
+    lateinit var binding: MakePatternFragmentBinding
     private val myAdapter by lazy { MyAdapter() }
     private val listCard by lazy { ListCard() }
+    private val viewModel: ViewModel by activityViewModels()
 
     companion object {
+        const val TAG = "MARKER"
         fun newInstance(): BottomShieldDialog {
             return BottomShieldDialog()
         }
@@ -24,7 +31,8 @@ class BottomShieldDialog : BottomSheetDialogFragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.make_pattern_fragment, container, false)
+        binding = MakePatternFragmentBinding.inflate(inflater)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -34,9 +42,11 @@ class BottomShieldDialog : BottomSheetDialogFragment() {
     }
 
     private fun initRecycler() {
-        make_bottom_shield.adapter = myAdapter
-
-        myAdapter.setOnItemClickListener { model ->
+        BottomRecyclerView.adapter = myAdapter
+        myAdapter.setOnItemClickListener { card ->
+            viewModel.messageTextToMainActivity.value = card.id
+            Toast.makeText( context, card.id,Toast.LENGTH_LONG).show()
+            dismiss()
         }
     }
 }

@@ -1,4 +1,4 @@
-package den.project.homework20.card
+package den.project.homework20.presentation.recycler
 
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView

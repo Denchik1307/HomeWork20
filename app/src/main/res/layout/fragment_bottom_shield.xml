@@ -10,7 +10,7 @@
         android:layout_width="30dp"
         android:layout_height="30dp"
         android:layout_marginVertical="8dp"
-        android:layout_marginLeft="30dp"
+        android:layout_marginLeft="10dp"
         android:background="@drawable/ic_card_image" />
 
     <TextView
@@ -18,10 +18,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginVertical="8dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="30dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="10dp"
         android:textColor="@color/black"
-        android:textSize="20dp"
+        android:textSize="24dp"
         android:gravity="center_vertical"
         tools:hint="@string/for_visual_test"
         tools:textColorHint="@color/light_gray" />

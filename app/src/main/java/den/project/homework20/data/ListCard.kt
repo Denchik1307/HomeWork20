@@ -1,4 +1,6 @@
-package den.project.homework20.card
+package den.project.homework20.data
+
+import den.project.homework20.presentation.recycler.Card
 
 class ListCard {
     val listCard: List<Card> = listOf(
