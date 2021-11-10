@@ -3,7 +3,7 @@ package den.project.homework20.presentation.recycler
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 
-class MyAdapter : RecyclerView.Adapter<CardHolder>() {
+class CardHolderAdapter : RecyclerView.Adapter<CardHolder>() {
 
     private var item: List<Card> = mutableListOf()
 

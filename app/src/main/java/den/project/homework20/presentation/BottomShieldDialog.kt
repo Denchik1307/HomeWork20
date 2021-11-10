@@ -10,12 +10,12 @@ import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import den.project.homework20.data.ListCard
 import den.project.homework20.databinding.MakePatternFragmentBinding
 import den.project.homework20.domain.ViewModel
-import den.project.homework20.presentation.recycler.MyAdapter
+import den.project.homework20.presentation.recycler.CardHolderAdapter
 import kotlinx.android.synthetic.main.make_pattern_fragment.*
 
 class BottomShieldDialog : BottomSheetDialogFragment() {
     lateinit var binding: MakePatternFragmentBinding
-    private val myAdapter by lazy { MyAdapter() }
+    private val myAdapter by lazy { CardHolderAdapter() }
     private val listCard by lazy { ListCard() }
     private val viewModel: ViewModel by activityViewModels()
 
@@ -45,7 +45,7 @@ class BottomShieldDialog : BottomSheetDialogFragment() {
         BottomRecyclerView.adapter = myAdapter
         myAdapter.setOnItemClickListener { card ->
             viewModel.messageTextToMainActivity.value = card.id
-            Toast.makeText( context, card.id,Toast.LENGTH_LONG).show()
+            Toast.makeText(context, "You selected: " + card.id, Toast.LENGTH_LONG).show()
             dismiss()
         }
     }
